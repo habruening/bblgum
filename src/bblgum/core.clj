@@ -1,6 +1,9 @@
 (ns bblgum.core
   (:require [bblgum.impl :as i]))
 
+(defn choose [args & opts]
+  (apply i/gum :choose args opts))
+
 (defn gum
   "Main driver of bblgum.
 
