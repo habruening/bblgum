@@ -33,9 +33,5 @@
   Returns a map of:
   status: The exit code from gum
   result: The output from the execution: seq of lines or coerced via :as."
-  ([cmd]
-   (i/gum cmd))
-  ([cmd args-or-opts]
-   (i/gum cmd args-or-opts))
-  ([cmd args & opts]
-   (apply i/gum cmd args opts)))
+  [& cmd-and-args]
+  (apply i/gum cmd-and-args))

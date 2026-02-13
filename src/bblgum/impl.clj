@@ -117,12 +117,8 @@
   Returns a map of:
   status: The exit code from gum
   result: The output from the execution: seq of lines or coerced via :as."
-  ([cmd]
-   (run (prepare-cmd-map cmd)))
-  ([cmd args-or-opts]
-   (run (prepare-cmd-map cmd args-or-opts)))
-  ([cmd args & opts]
-   (run (apply prepare-cmd-map cmd args opts))))
+  ([& cmd-and-args]
+   (run (apply prepare-cmd-map cmd-and-args))))
 
 (comment
   "Testing examples"
